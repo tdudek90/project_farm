@@ -6,25 +6,25 @@ public class MenuView {
 
     public int menu() {
         System.out.println("1. START");
-        System.out.println("2. OPCJE");
-        System.out.println("3. ZAKONCZ");
+        System.out.println("2. OPTIONS");
+        System.out.println("3. QUIT");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
 
     public void startInformaion() {
-        System.out.println("Witaj w aplikacji Stodoła 3000. Wybierz opcję");
+        System.out.println("Welcome to the Barn application. Choose an option");
     }
 
     public int printOption() {
         System.out.println("O P C J E");
-        System.out.println("1. Dodaj stodołe");
-        System.out.println("2. Dodaj zwierze");
-        System.out.println("3. Usuń stodołe");
-        System.out.println("4. Usuń zwierze");
-        System.out.println("5. Pokaż najstarsze");
-        System.out.println("6. Pokaż najmłodsze");
-        System.out.println("7. Pokaż jakie zwierzeta sa w stodole");
+        System.out.println("1. ADD BARN");
+        System.out.println("2. ADD ANIMAL");
+        System.out.println("3. DELETE BARN");
+        System.out.println("4. DELETE ANIMAL");
+        System.out.println("5. SHOW THE OLDEST");
+        System.out.println("6. SHOW THE YOUNGEST");
+        System.out.println("7. SHOW ANIMALS IN THE BARN");
 
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
@@ -32,11 +32,11 @@ public class MenuView {
 
 
     public void beforeExit() {
-        System.out.println("Dziękujemy za skorzystanie ze Stodoły 3000");
+        System.out.println("Thank you for choosing my application");
     }
 
     public void noObjectsToRemove() {
-        System.out.println("Brak obiektów do usunięcia");
+        System.out.println("There are no objects to remove");
     }
 
 

@@ -37,10 +37,10 @@ public class Animal implements Comparable<Animal> {
     public Animal addAnimal() {
         Animal animal = new Animal();
 //        Scanner scanner = new Scanner(System.in);
-        System.out.println("Wpisz typ zwierzęcia");
+        System.out.println("Enter type of animal");
         String typeOfAnimal = scanner.nextLine();
         animal.setType(type);
-        System.out.println("Podaj wiek zwierzecia");
+        System.out.println("Enter age of animal");
         int ageOfAnimal = scanner.nextInt();
         animal.setAge(ageOfAnimal);
         animal = new Animal(typeOfAnimal, ageOfAnimal);
@@ -68,7 +68,7 @@ public class Animal implements Comparable<Animal> {
     public void printAnimalsFromBarn() {
         FileReader fileReader = null;
 //        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj nazwe stodoły");
+        System.out.println("Enter name of barn");
         String barnName = scanner.next();
         try {
             fileReader = new FileReader("E:\\Homework\\" + barnName + ".txt");
@@ -112,15 +112,15 @@ public class Animal implements Comparable<Animal> {
     public Animal addTypeAndAgeOfAnimalToBarn() {
         Animal animal = new Animal();
 //        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj nazwe stodoły, w której chcesz umieścić zwierze");
+        System.out.println("Enter the name of the barn in which you want to place the animal");
         String barnName = scanner.nextLine();
         File file = new File("E:\\Homework\\" + barnName + ".txt");
         try {
             try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file, true)))) {
                 System.out.println();
-                System.out.println("Podaj typ: ");
+                System.out.println("Enter type: ");
                 String type = scanner.next();
-                System.out.println("Podaj wiek: ");
+                System.out.println("Enter age: ");
                 int age = scanner.nextInt();
                 animal.setType(type);
                 animal.setAge(age);

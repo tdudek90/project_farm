@@ -28,7 +28,7 @@ public class Barn {
     public Barn addBarn() {
         Barn barn = new Barn("");
 //        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj nazwę stodoły");
+        System.out.println("Enter name of barn");
         String barnName = scanner.nextLine();
         return new Barn(barnName);
     }
@@ -54,14 +54,14 @@ public class Barn {
 
     public File createBarn() {
 //        Scanner scanner = new Scanner(System.in);
-        System.out.print("Podaj nazwe stodoły: ");
+        System.out.print("Enter name of barn: ");
         String catalog = scanner.nextLine();
         File file = new File("E:\\Homework\\" + catalog + ".txt");
         try {
             if (file.createNewFile()) {
-                System.out.println("Udało się utworzyć stodołę");
+                System.out.println("Barn has been created successfully");
             } else {
-                System.out.println("Wystąpił błąd lub stodoła już istnieje");
+                System.out.println("An error occurred or a barn already exists");
             }
         } catch (IOException io) {
             io.printStackTrace();
@@ -71,11 +71,11 @@ public class Barn {
 
     public void deleteBarn() {
 //        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj stodole do usuniecia");
+        System.out.println("Enter barn to delete");
         String barnToDelete = scanner.next();
         File file = new File("E:\\Homework\\" + barnToDelete + ".txt");
         file.delete();
-        System.out.println("Stodoła " + barnToDelete + " została usunięta");
+        System.out.println("Barn " + barnToDelete + " has been removed");
 
     }
 

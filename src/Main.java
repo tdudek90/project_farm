@@ -6,7 +6,7 @@ public class Main {
         MenuView menuView = new MenuView();
         Animal animal = new Animal();
         Barn barn = new Barn("");
-        System.out.println("Witaj w aplikacji.");
+        System.out.println("WELCOME TO THE BARN PROGRAM.");
         boolean ifEnd = false;
         while (!ifEnd) {
             int menu1 = menuView.menu();
